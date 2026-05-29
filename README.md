@@ -1,97 +1,60 @@
-# RepoFlow
+# 🌊 RepoFlow
 
-**RepoFlow** is a lightweight, responsive, and powerful web-based GitHub repository management application. Built with HTML5, Tailwind CSS, and Vanilla JavaScript, this tool allows you to manage your entire GitHub ecosystem directly from your browser or via a mobile application without the need for a local Git installation.
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![GitHub top language](https://img.shields.io/github/languages/top/username/repoflow)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+**RepoFlow** is a lightweight, responsive, and elegant open-source GitHub repository management client, crafted entirely with native Kotlin and Jetpack Compose. Seamlessly track public and private repositories, explore comprehensive commit histories, and manage your GitHub projects from one central hub.
 
 ---
 
-## Key Features
+## ✨ Features
 
-*   **Full Repository Access**: Create, view, and delete repositories directly within the application.
-*   **File Explorer and Manager**: Intuitive folder navigation, file creation, built-in code editing, and file deletion.
-*   **Streamlined Uploads**: Upload files from your local device directly to any directory in your repository.
-*   **Batch Deletion**: Bulk selection functionality to remove multiple files in a single operation.
-*   **Secure Authentication Persistence**: Persistent login using Personal Access Tokens (PAT) stored securely via `localStorage`.
-*   **Advanced Settings**: Active token management, GitHub profile visualization, and direct links to GitHub Developer settings.
-*   **Cross-Platform Responsiveness**: Optimized for seamless performance across Desktop, Tablet, and Mobile devices.
-*   **Custom Interface Components**: Enhanced user experience utilizing modern, synchronized confirmation dialogs.
+- **GitHub Authentication**: Securely log in using Personal Access Tokens (PAT).
+- **Dashboard Hub**: Get an instant overview of your GitHub profile and repository statistics.
+- **Repository List**: Browse through your public and private repositories seamlessly.
+- **Detailed Insights**: Tap into any repository to view language breakdowns, descriptions, and current availability status.
+- **Repository Explorer**: Explore files and repositories, opening individual code files to inspect their contents right on your mobile device.
+- **Responsive Adaptive Design**: Looks fantastic and uses window size classes to stay responsive across phones, foldable devices, and tablets.
+- **Modern Jetpack Compose Architecture**: Built with Material Design 3 guidelines for a clean, accessible mobile experience.
 
----
+## 🛠 Tech Stack & Architecture
 
-## Interface Preview
+- **Language:** Kotlin
+- **UI Toolkit:** Jetpack Compose & Material 3
+- **Architecture:** MVVM (Model-View-ViewModel) + StateFlow + Clean Architecture guidelines
+- **Networking:** Ktor / Retrofit, OkHttp, Moshi
+- **Image Loading:** Coil
+- **Local Database (Optional):** Room
 
-<img width="1920" height="1440" alt="ss" src="https://github.com/user-attachments/assets/3971c158-bb62-470d-a078-a800304f1ee5" />
+## 🚀 Getting Started
 
+### Prerequisites
 
----
+Make sure you have Android Studio installed, or the Google AI Studio Android build ecosystem!
 
-## Technical Specifications
+### Configuration
 
-*   **Frontend Framework**: [Tailwind CSS](https://tailwindcss.com/) for styling and [Lucide Icons](https://lucide.dev/) for iconography.
-*   **API Integration**: [GitHub REST API v3](https://docs.github.com/en/rest).
-*   **Data Persistence**: Browser-based LocalStorage.
-*   **Core Logic**: Vanilla JavaScript (ES6+).
+To fetch data from GitHub securely, RepoFlow operates using GitHub Personal Access Tokens.
 
----
+1. Head to your [GitHub Settings - Personal Access Tokens (Classic)](https://github.com/settings/tokens).
+2. Generate a new token with the `repo` scope securely granted.
+3. Once running, paste this token directly into RepoFlow's login screen.
 
-## Installation and Setup
+### Building Locally
 
-RepoFlow can be deployed as a web application or installed as an Android application.
+```bash
+git clone https://github.com/your-username/repoflow.git
+cd repoflow
+./gradlew assembleDebug
+```
 
-### Android Installation
-1.  **Download**: Navigate to the [Releases](https://github.com/Elvandito/repoflow/releases/latest) section of this repository.
-2.  **Select Asset**: Download the latest `.apk` file.
-3.  **Install**: Open the downloaded file on your Android device. 
-    *   *Note: You may need to enable "Install from Unknown Sources" in your device settings.*
-4.  **Permissions**: Grant the necessary storage permissions to allow file uploads to your repositories.
+## 🎨 Theme & Accessibility
 
-### Web Deployment
-1.  **Clone the Repository**:
-    ```bash
-    git clone [https://github.com/Elvandito/repoflow.git
-    ```
-2.  **Execution**: Open `index.html` in any modern web browser. No local server is required.
+RepoFlow boasts a beautiful default Cosmic Dark/Ocean Blue adaptive theme taking advantage of Material 3's core dynamic and structured properties map. Adaptive icons and edge-to-edge content layers make sure it fits right at home on modern Android 12+ OS constraints. 
 
----
+## 👨‍💻 Developer & Support
 
-## Authentication Setup
-
-To use RepoFlow, you must provide a GitHub Personal Access Token (PAT).
-
-1.  **Generate Token**: 
-    *   Navigate to [GitHub Settings > Developer Settings](https://github.com/settings/tokens).
-    *   Select **Generate new token (classic)**.
-2.  **Scopes**: Ensure you grant the `repo` and `delete_repo` scopes to allow full management capabilities.
-3.  **Login**: Copy the generated token and paste it into the RepoFlow Pro login screen. Your token is stored locally and never sent to third-party servers.
+For issues or questions, you can contact the developer:
+- Telegram: [@Vann759](https://t.me/Vann759)
+- Email: ditoelvan2@gmail.com 
 
 ---
 
-## Security and Privacy
-
-*   **Token Security**: This application communicates exclusively with the official GitHub API. Your token is never transmitted to any external servers.
-*   **Local Storage**: Authentication tokens are stored locally on your device. Always use the logout function when operating on shared or public devices.
-*   **Transparency**: The source code is fully open for security audits and community review.
-
----
-
-## Contributing
-
-Community contributions are welcome. To contribute:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/ProposedFeature`).
-3. Commit your modifications (`git commit -m 'Add ProposedFeature'`).
-4. Push to the branch (`git push origin feature/ProposedFeature`).
-5. Open a Pull Request.
-
----
-
-## License
-
-This project is licensed under the terms of the MIT License. Refer to the [LICENSE](LICENSE) file for further details.
-
----
-
-**Developed for the global developer community.**
+Made with ❤️ using Jetpack Compose + AI Studio.
